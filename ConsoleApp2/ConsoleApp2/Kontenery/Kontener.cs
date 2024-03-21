@@ -11,6 +11,8 @@ public class Kontener : IContainer
     public double Wysokosc { get; set; }
     public double Glebokosc { get; set; }
     
+    public String numerSeryjny { get; set; }
+    
 
 
     public Kontener(double masaLadunku, double wysokosc)
