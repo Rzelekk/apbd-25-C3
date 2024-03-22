@@ -11,8 +11,9 @@ public class Kontener : IContainer
     public double Wysokosc { get; set; }
     public double Glebokosc { get; set; }
     
-    public String numerSeryjny { get; set; }
-    
+    private static HashSet<int> generatedNumbers = new HashSet<int>();  
+
+    private static Random random = new Random();                        
 
 
     public Kontener(double masaLadunku, double wysokosc)
@@ -32,4 +33,16 @@ public class Kontener : IContainer
     {
         throw new OverfillException();
     }
+    
+    private string GenerateSerialNumber()                                                          
+    {                                                                                              
+        int number;                                                                                
+        do                                                                                         
+        {                                                                                          
+            number = random.Next(1, 1000); // zakładamy zakres unikalnych liczb od 1 do 999        
+        } while (generatedNumbers.Contains(number));                                               
+                                                                                               
+        generatedNumbers.Add(number);                                                              
+        return $"KON-{Typ}-{number}";                                                             
+    }                                                                                              
 }
