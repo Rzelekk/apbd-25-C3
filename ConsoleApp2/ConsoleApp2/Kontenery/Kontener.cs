@@ -8,8 +8,11 @@ public class Kontener : IContainer
 {
     public double MasaLadunku { get; set; }
     public double MasaWlasna { get; set; }
+    public double MaxMasaLadunku { get; set; }
     public double Wysokosc { get; set; }
     public double Glebokosc { get; set; }
+    public String NumerSeryjny { get; private set; }
+    public string Typ { get; private set; }           
     
     private static HashSet<int> generatedNumbers = new HashSet<int>();  
 
