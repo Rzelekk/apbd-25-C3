@@ -19,10 +19,14 @@ public class Kontener : IContainer
     private static Random random = new Random();                        
 
 
-    public Kontener(double masaLadunku, double wysokosc)
+    public Kontener(String type, double masaWlasna, double wysokosc, double glebokosc, double maxMasaLadunku)
     {
-        MasaLadunku = masaLadunku;
+        NumerSeryjny = GenerateSerialNumber();
+        Typ = type;
+        MasaWlasna = masaWlasna;
+        MaxMasaLadunku = maxMasaLadunku;
         Wysokosc = wysokosc;
+        Glebokosc = glebokosc;
     }
     
     
