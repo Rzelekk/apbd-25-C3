@@ -5,10 +5,10 @@ namespace ConsoleApp2.Kontenery;
 
 public class LiquidKontener : Kontener, IHazardNotifier, IContainer
 {
-    public LiquidKontener(double masaLadunku, double wysokosc) : base(masaLadunku, wysokosc)
+    public Boolean HazardCargo;
+    
+    public LiquidKontener(double masaWlasna, double wysokosc, double glebokosc, double maxMasaLadunku) : base("L", masaWlasna, wysokosc, glebokosc, maxMasaLadunku)
     {
-        
-        
         
     }
 
