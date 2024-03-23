@@ -12,7 +12,8 @@ public class GasKontener : Kontener, IContainer, IHazardNotifier
 
     public override void Unload()
     {
-        base.Unload();
+        Console.WriteLine("Wyladowano caly ladunek: "+MasaLadunku*0.95+" kg");
+        MasaLadunku -= MasaLadunku*0.95;
     }
 
     public override void Load(double cargoWeight)
