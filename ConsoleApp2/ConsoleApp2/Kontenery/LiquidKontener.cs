@@ -1,6 +1,9 @@
-﻿namespace ConsoleApp2.Kontenery;
+﻿using ConsoleApp2.Exceptions;
+using ConsoleApp2.Interfaces;
 
-public class LiquidKontener : Kontener
+namespace ConsoleApp2.Kontenery;
+
+public class LiquidKontener : Kontener, IHazardNotifier, IContainer
 {
     public LiquidKontener(double masaLadunku, double wysokosc) : base(masaLadunku, wysokosc)
     {
