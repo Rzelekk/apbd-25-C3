@@ -23,6 +23,6 @@ public class GasKontener : Kontener, IContainer, IHazardNotifier
 
     public override void Unload(double weight)
     {
-        base.Unload(weight);
+        base.Unload(weight*0.95);
     }
 }
