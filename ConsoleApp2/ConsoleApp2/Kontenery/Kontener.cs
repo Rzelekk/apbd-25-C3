@@ -47,6 +47,18 @@ public class Kontener : IContainer
             MasaWlasna += cargoWeight;
         }
     }
+
+    public void Unload(double weight)
+    {
+        if (weight > MasaLadunku)
+        {
+            throw new NotEnoughCargoException("Chcesz wyladować więcej ladunku niż znajduje się w kontenerze");
+        }
+        else
+        {
+            MasaLadunku -= weight;
+        }
+    }
     
     private string GenerateSerialNumber()                                                          
     {                                                                                              
