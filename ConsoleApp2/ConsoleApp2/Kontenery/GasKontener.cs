@@ -16,11 +16,6 @@ public class GasKontener : Kontener, IContainer, IHazardNotifier
         MasaLadunku -= MasaLadunku*0.95;
     }
 
-    public override void Load(double cargoWeight)
-    {
-        base.Load(cargoWeight);
-    }
-
     public override void Unload(double weight)
     {
         base.Unload(weight*0.95);
