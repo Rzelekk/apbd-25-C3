@@ -33,7 +33,8 @@ public class Kontener : IContainer
     
     public virtual void Unload()
     {
-        throw new NotImplementedException();
+     Console.WriteLine("Wyladowano caly ladunek: "+MasaLadunku+" kg");
+     MasaLadunku = 0;
     }
 
     public virtual void Load(double cargoWeight)
@@ -45,6 +46,7 @@ public class Kontener : IContainer
         else
         {
             MasaWlasna += cargoWeight;
+            Console.WriteLine("Zaladowano: "+cargoWeight+" kg, lączna masa ladunku: " + MasaLadunku +" kg");
         }
     }
 
@@ -57,6 +59,7 @@ public class Kontener : IContainer
         else
         {
             MasaLadunku -= weight;
+            Console.WriteLine("Wyladowano: "+weight+" kg, pozostalo " + MasaLadunku +" kg");
         }
     }
     
