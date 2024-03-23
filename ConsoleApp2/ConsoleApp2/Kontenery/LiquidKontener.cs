@@ -11,13 +11,7 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
     {
         
     }
-
-
-    public override void Unload(double weight)
-    {
-        base.Unload(weight);
-    }
-
+    
     public override void Load(double cargoWeight)
     {
         if (HazardCargo)
@@ -46,11 +40,6 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
                 Console.WriteLine("Zaladowano: "+cargoWeight+" kg, lączna masa ladunku: " + MasaLadunku +" kg");
             }
         }
-    }
-
-    public override void Unload()
-    {
-        base.Unload();
     }
     
 }
