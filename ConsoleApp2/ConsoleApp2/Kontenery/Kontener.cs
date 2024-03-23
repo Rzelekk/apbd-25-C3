@@ -38,7 +38,14 @@ public class Kontener : IContainer
 
     public void Load(double cargoWeight)
     {
-        throw new OverfillException();
+        if (MasaLadunku + cargoWeight > MaxMasaLadunku)
+        {
+            throw new OverfillException("Chcesz zaladować więcej niż kontener może przyjąć");
+        }
+        else
+        {
+            MasaWlasna += cargoWeight;
+        }
     }
     
     private string GenerateSerialNumber()                                                          
