@@ -48,7 +48,7 @@ public class Kontener : IContainer
         }
     }
 
-    public void Unload(double weight)
+    public virtual void Unload(double weight)
     {
         if (weight > MasaLadunku)
         {
