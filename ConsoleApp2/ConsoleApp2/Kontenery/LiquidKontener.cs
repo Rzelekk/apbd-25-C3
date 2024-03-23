@@ -16,4 +16,12 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
     {
         base.Unload();
     }
+    
+    public void HazardNotification(string contenerSerial, string tekst)
+    {
+        Console.Error.WriteLine("---NIEBEZPIECZEŃSTWO---");
+        Console.Error.WriteLine($"Kontener {contenerSerial} -> {tekst}");
+    }
+    
+    
 }
