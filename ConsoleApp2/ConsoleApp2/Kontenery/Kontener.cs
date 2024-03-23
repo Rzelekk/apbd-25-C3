@@ -36,7 +36,7 @@ public class Kontener : IContainer
         throw new NotImplementedException();
     }
 
-    public void Load(double cargoWeight)
+    public virtual void Load(double cargoWeight)
     {
         if (MasaLadunku + cargoWeight > MaxMasaLadunku)
         {
