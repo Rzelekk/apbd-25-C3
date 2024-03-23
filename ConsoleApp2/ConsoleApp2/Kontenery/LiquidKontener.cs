@@ -24,7 +24,8 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
         {
             if (MasaLadunku + cargoWeight > MaxMasaLadunku / 2)
             {
-                HazardNotification(NumerSeryjny,"Próba zaladowania ladunku niebezpiecznego w masie wiekszej niz dopuszczalne normy");
+                
+                IHazardNotifier.HazardNotification(NumerSeryjny,"Próba zaladowania ladunku niebezpiecznego w masie wiekszej niz dopuszczalne normy");
                // throw new OverfillException("Masa ladunku przekracza dopuszczalny poziom dla ladunku niebezpiecznego!!");
             }
             else
@@ -36,7 +37,7 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
         {
             if (MasaLadunku + cargoWeight > MaxMasaLadunku*0.9)
             {
-                HazardNotification(NumerSeryjny,"Proba zaladowania kontenera ponad 90% dopuszczalnej ladownosci");
+                IHazardNotifier.HazardNotification(NumerSeryjny,"Proba zaladowania kontenera ponad 90% dopuszczalnej ladownosci");
                 //throw new OverfillException("Chcesz zaladować więcej niż kontener może przyjąć");
             }
             else
