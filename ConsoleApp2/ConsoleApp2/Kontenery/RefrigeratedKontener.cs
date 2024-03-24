@@ -61,6 +61,27 @@ public class RefrigeratedKontener : Kontener, IContainer
     {
         Console.WriteLine("Musisz podać typ produktu który chcesz załadować do chłodni");
     }
+    
+    public void Load(double cargoWeight, Products product)
+    {
+        if (RodzajProduktu == Products.BrakTowaru || RodzajProduktu == product)
+        {
+            if (RodzajProduktu == product)
+            {
+                base.Load(cargoWeight);
+            }
+            else
+            {
+                RodzajProduktu = product;
+                setupTemperature(product);
+                base.Load(cargoWeight);
+            }
+        }
+        else
+        {
+            Console.WriteLine($"Nie można załadować {product} poniważ w kontenerze znajduje się już {RodzajProduktu}");
+        }
+    }
 
     public override void Unload(double weight)
     {
