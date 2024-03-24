@@ -11,6 +11,47 @@ public class RefrigeratedKontener : Kontener, IContainer
     {
     }
 
+    private double setupTemperature(Products product)
+    {
+        double temp = 0.0;
+
+        switch (product)
+        {
+            case Products.Banana:
+                temp = 13.3;
+                break;
+            case Products.Chocolate:
+                temp = 18;
+                break;
+            case Products.Fish:
+                temp = 2;
+                break;
+            case Products.Meat:
+                temp = -15;
+                break;
+            case Products.IceCream:
+                temp = -18;
+                break;
+            case Products.FrozenPizza:
+                temp = -30;
+                break;
+            case Products.Cheese:
+                temp = 7.2;
+                break;
+            case Products.Sausages:
+                temp = 5;
+                break;
+            case Products.Butter:
+                temp = 20.5;
+                break;
+            case Products.Eggs:
+                temp = 19;
+                break;
+        }
+
+        return temp;
+    }
+
     public override void Unload()
     {
         base.Unload();
