@@ -2,6 +2,7 @@
 
 public enum Products
 {
+    BrakTowaru,
     Banana,
     Chocolate,
     Fish,
