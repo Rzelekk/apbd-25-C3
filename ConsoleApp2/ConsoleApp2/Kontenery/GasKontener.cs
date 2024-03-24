@@ -5,7 +5,7 @@ namespace ConsoleApp2.Kontenery;
 public class GasKontener : Kontener, IContainer, IHazardNotifier
 {
 
-    public double cisnienie;
+    public double Cisnienie { get; set; }
     public GasKontener(string type, double masaWlasna, double wysokosc, double glebokosc, double maxMasaLadunku) : base(type, masaWlasna, wysokosc, glebokosc, maxMasaLadunku)
     {
     }
