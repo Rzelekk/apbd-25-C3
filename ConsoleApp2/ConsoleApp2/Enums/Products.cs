@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp2.Kontenery;
+﻿namespace ConsoleApp2.Enums;
 
 public enum Products
 {
