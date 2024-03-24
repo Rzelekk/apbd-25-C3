@@ -59,7 +59,7 @@ public class RefrigeratedKontener : Kontener, IContainer
 
     public override void Load(double cargoWeight)
     {
-        base.Load(cargoWeight);
+        Console.WriteLine("Musisz podać typ produktu który chcesz załadować do chłodni");
     }
 
     public override void Unload(double weight)
