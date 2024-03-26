@@ -12,7 +12,7 @@ public class Kontener : IContainer
     public double Wysokosc { get; set; }
     public double Glebokosc { get; set; }
     public String NumerSeryjny { get; private set; }
-    public string Typ { get; private set; }           
+    public String Typ { get; set; }           
     
     private static HashSet<int> generatedNumbers = new HashSet<int>();  
 
