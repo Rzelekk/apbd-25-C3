@@ -36,7 +36,7 @@ public class Kontener : IContainer
     
     public virtual void Unload()
     {
-     Console.WriteLine("Wyladowano caly ladunek: "+MasaLadunku+" kg");
+     Console.WriteLine($"Kontener {NumerSeryjny} -> wyładowano cały ładunek: "+MasaLadunku+" kg");
      MasaLadunku = 0;
     }
 
