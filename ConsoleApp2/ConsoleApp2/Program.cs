@@ -2,6 +2,23 @@
 
 
 
+void ShowShipList()
+{
+    Console.WriteLine("Lista kontenerowców:");
+    if (ShipList.Count == 0)
+    {
+        Console.WriteLine("brak");
+    }
+    else
+    {
+        foreach (var Ship in ShipList)
+        {
+            Ship.showShip();
+        }    
+    }
+    Console.WriteLine("\n");
+}
+
 void ShowKontenerList()
 {
     Console.WriteLine("Lista kontenerów:");
