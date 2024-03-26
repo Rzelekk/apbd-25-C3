@@ -3,7 +3,40 @@ using ConsoleApp2.Enums;
 using ConsoleApp2.Kontenery;
 using ConsoleApp2.Ship;
 
-
+// Ship ship = new Ship("Ship1",10,10,5);
+//
+//
+// List<Kontener> kontenerToLoad = new List<Kontener>();
+//
+// LiquidKontener liquidKontener = new LiquidKontener(1204, 670, 450, 567);
+// LiquidKontener liquidHazardKontener = new LiquidKontener(1204, 670, 450, 987);
+// GasKontener gasKontener = new GasKontener(1000,50,100,600);
+// RefrigeratedKontener refrigeratedKontener = new RefrigeratedKontener(2351, 218, 732, 763);
+// liquidKontener.Load(566);
+// liquidHazardKontener.Load(326, true);
+// gasKontener.Load(124);
+// refrigeratedKontener.Load(653,Products.FrozenPizza);
+//
+// kontenerToLoad.Add(liquidKontener);
+// kontenerToLoad.Add(liquidHazardKontener);
+// kontenerToLoad.Add(gasKontener);
+// kontenerToLoad.Add(refrigeratedKontener);
+//
+// // ship.LoadContainer(gasKontener);
+// ship.LoadContainer(kontenerToLoad);
+//
+// ship.ShowLadunek();
+//
+// LiquidKontener liquidKontener2 = new LiquidKontener(1204, 670, 450, 567);
+//
+// ship.SwapKonteners(liquidKontener2, "KON-C-423");
+// // ship.KontenerList[0].Unload();
+//
+// ship.ShowLadunek();
+//
+// Console.WriteLine(liquidKontener2.ShowKontener());
+//
+// ship.showShip();
 
 bool CzyKoniec = false;
 
