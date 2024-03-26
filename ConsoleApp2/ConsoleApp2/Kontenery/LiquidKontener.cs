@@ -44,4 +44,23 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
         }
     }
     
+    public override string ShowKontener()
+    {
+        if (HazardCargo)
+        {
+            return $"Kontener {NumerSeryjny}: \n" +
+                   $"   -Masa własna -> {MasaWlasna} kg\n" +
+                   $"   -Masa ładunku -> {MasaLadunku} kg\n" +
+                   $"   -Masa całkowita -> {getMasaCalkowitaKontenera()} kg\n" +
+                   $"   -Masa wysokość -> {Wysokosc} cm\n" +
+                   $"   -Masa głębokość -> {Glebokosc} cm\n" +
+                   $"   -Typ kontenera-> {Typ}\n" + 
+                   $"   -Hazard Cargo -> TAK\n";
+        }
+        else
+        {
+            return base.ShowKontener();
+        }
+    }
+    
 }
