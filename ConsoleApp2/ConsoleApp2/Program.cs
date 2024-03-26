@@ -1,4 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿
+using ConsoleApp2.Enums;
+using ConsoleApp2.Kontenery;
+using ConsoleApp2.Ship;
+
+
+
+bool CzyKoniec = false;
+
+List<Ship> ShipList = new List<Ship>();
+List<Kontener> KontenerList = new List<Kontener>();
 
 
 
