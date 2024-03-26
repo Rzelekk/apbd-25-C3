@@ -76,5 +76,16 @@ public class Kontener : IContainer
                                                                                                
         generatedNumbers.Add(number);                                                              
         return $"KON-{Typ}-{number}";                                                             
-    }                                                                                              
+    }
+
+    public virtual string ShowKontener()
+    {
+        return $"Kontener {NumerSeryjny}: \n" +
+               $"   -Masa własna -> {MasaWlasna} kg\n" +
+               $"   -Masa ładunku -> {MasaLadunku} kg\n" +
+               $"   -Masa całkowita -> {getMasaCalkowitaKontenera()} kg\n" +
+               $"   -Masa wysokość -> {Wysokosc} cm\n" +
+               $"   -Masa głębokość -> {Glebokosc} cm\n" +
+               $"   -Typ kontenera -> {Typ}\n";
+    }
 }
