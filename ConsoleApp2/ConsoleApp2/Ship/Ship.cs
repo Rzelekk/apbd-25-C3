@@ -68,9 +68,11 @@ public class Ship
         {
             Console.WriteLine($"Nie można znaleźć kontenera o numerze seryjnym {SerialNumber}.");
         }
-        
-        KontenerList.RemoveAt(indexDoWyladunku);
-        Console.WriteLine($"Usunięto kontener o numerze {SerialNumber} ze statku {Nazwa}");
+        else
+        {
+            KontenerList.RemoveAt(indexDoWyladunku);
+            Console.WriteLine($"Usunięto kontener o numerze {SerialNumber} ze statku {Nazwa}");
+        }
     }
     
     public void UnloadContainer(int ConteinerNumberAtShip)
