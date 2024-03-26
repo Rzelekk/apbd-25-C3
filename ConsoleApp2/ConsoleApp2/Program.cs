@@ -145,7 +145,29 @@ while (!CzyKoniec)
             
             break;
         case 5:
+            Console.WriteLine("Podaj nazwę statku: ");
             
+            ShipIndex = ShipList.FindIndex(k => k.Nazwa == Console.ReadLine());
+            
+            if(ShipIndex == -1)
+            {
+                Console.WriteLine($"Nie można znaleźć statku o nazwie: {ShipIndex}.");
+            }
+            else
+            {
+                Console.WriteLine("Podaj numer kontenera: ");
+            
+                KontenerIndex = KontenerList.FindIndex(k => k.NumerSeryjny == Console.ReadLine());
+    
+                if(KontenerIndex == -1)
+                {
+                    Console.WriteLine($"Nie można znaleźć kontenera o numerze seryjnym {KontenerIndex}.");
+                }
+                else
+                {
+                    ShipList[ShipIndex].LoadContainer(KontenerList[KontenerIndex]);
+                }
+            }
             break;
         case 6:
             
