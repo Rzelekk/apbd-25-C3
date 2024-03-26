@@ -101,7 +101,45 @@ while (!CzyKoniec)
             }
             break;
         case 3:
+            Console.WriteLine("Podaj numer kontenera: ");
             
+            KontenerIndex = KontenerList.FindIndex(k => k.NumerSeryjny == Console.ReadLine());
+    
+            if(KontenerIndex == -1)
+            {
+                Console.WriteLine($"Nie można znaleźć kontenera o numerze seryjnym {KontenerIndex}.");
+            }
+            else
+            {
+                Console.WriteLine("Podaj masę ładunku w kg: ");
+                double masaLadunku = Convert.ToDouble(Console.ReadLine());
+                
+                switch (KontenerList[KontenerIndex].Typ)
+                {
+                    case "L":
+                        Console.WriteLine("Czy jest to ładunek niebezpieczny (true/false)");
+                        String t = Console.ReadLine();
+                        if (t == "true" || t == "false")
+                        {
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("nie poprawna wartość");
+                        }
+                        break;
+                    case "G":
+                        
+                        break;
+                    case "C":
+                        
+                        break;
+                    default:
+                        Console.WriteLine("Podany typ kontenera jest nieprawidłowy");
+                        break;
+                }
+                KontenerList[KontenerIndex].ShowKontener();
+            }
             break;
         case 4:
             
