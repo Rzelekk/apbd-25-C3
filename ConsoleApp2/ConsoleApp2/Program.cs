@@ -209,15 +209,15 @@ while (!CzyKoniec)
         case 11:
             Console.WriteLine("Podaj numer kontenera: ");
             
-            int index = KontenerList.FindIndex(k => k.NumerSeryjny == Console.ReadLine());
+            KontenerIndex = KontenerList.FindIndex(k => k.NumerSeryjny == Console.ReadLine());
     
-            if(index == -1)
+            if(KontenerIndex == -1)
             {
-                Console.WriteLine($"Nie można znaleźć kontenera o numerze seryjnym {index}.");
+                Console.WriteLine($"Nie można znaleźć kontenera o numerze seryjnym {KontenerIndex}.");
             }
             else
             {
-                KontenerList[index].ShowKontener();
+                KontenerList[KontenerIndex].ShowKontener();
             }
             break;
         case 12:
