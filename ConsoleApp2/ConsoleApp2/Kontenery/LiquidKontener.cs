@@ -25,6 +25,7 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
             else
             {
                 MasaLadunku += cargoWeight;
+                Console.WriteLine($"Kontener {NumerSeryjny} -> Zaladowano: "+cargoWeight+" kg, lączna masa ladunku: " + MasaLadunku +" kg");
             }
         }
         else
