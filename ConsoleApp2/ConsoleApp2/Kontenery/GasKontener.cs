@@ -6,7 +6,7 @@ public class GasKontener : Kontener, IContainer, IHazardNotifier
 {
 
     public double Cisnienie { get; set; }
-    public GasKontener(string type, double masaWlasna, double wysokosc, double glebokosc, double maxMasaLadunku) : base(type, masaWlasna, wysokosc, glebokosc, maxMasaLadunku)
+    public GasKontener(double masaWlasna, double wysokosc, double glebokosc, double maxMasaLadunku) : base("G", masaWlasna, wysokosc, glebokosc, maxMasaLadunku)
     {
     }
 
