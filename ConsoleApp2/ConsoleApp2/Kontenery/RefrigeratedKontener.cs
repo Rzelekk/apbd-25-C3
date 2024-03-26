@@ -87,4 +87,17 @@ public class RefrigeratedKontener : Kontener, IContainer
     {
         base.Unload(weight);
     }
+    
+    public override string ShowKontener()
+    {
+        return $"Kontener {NumerSeryjny}: \n" +
+               $"   -Masa własna -> {MasaWlasna} kg\n" +
+               $"   -Masa ładunku -> {MasaLadunku} kg\n" +
+               $"   -Masa całkowita -> {getMasaCalkowitaKontenera()} kg\n" +
+               $"   -Masa wysokość -> {Wysokosc} cm\n" +
+               $"   -Masa głębokość -> {Glebokosc} cm\n" +
+               $"   -typ kontenera -> {Typ}\n" +
+               $"   -Rodzaj ładunku -> {RodzajProduktu}\n" +
+               $"   -Temperatura -> {Temperatura}\u00b0C";
+    }
 }
