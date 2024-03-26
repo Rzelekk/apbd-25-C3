@@ -28,8 +28,11 @@ public class Kontener : IContainer
         Wysokosc = wysokosc;
         Glebokosc = glebokosc;
     }
-    
-    
+
+    public virtual double getMasaCalkowitaKontenera()
+    {
+        return MasaLadunku + MasaWlasna;
+    }
     
     public virtual void Unload()
     {
