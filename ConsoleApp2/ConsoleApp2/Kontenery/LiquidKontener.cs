@@ -12,7 +12,7 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
         
     }
     
-    public override void Load(double cargoWeight)
+    public void Load(double cargoWeight, Boolean hazardCargo)
     {
         if (hazardCargo)
         {
