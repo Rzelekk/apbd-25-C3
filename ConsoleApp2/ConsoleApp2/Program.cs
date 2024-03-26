@@ -11,6 +11,103 @@ List<Ship> ShipList = new List<Ship>();
 List<Kontener> KontenerList = new List<Kontener>();
 
 
+while (!CzyKoniec)
+{
+    ShowShipList();
+    ShowKontenerList();
+    ShowMenu();
+
+    switch (Convert.ToInt32(Console.ReadLine()))
+    {
+        case 1:
+            Console.WriteLine("Podaj nazwę statku:");
+            string nazwa = Console.ReadLine();
+
+            Console.WriteLine("Podaj maksymalną liczbę kontenerów:");
+            int maxKontenerCount = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Podaj maksymalne obciążenie kontenerów:");
+            int maxKontenerLoad = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Podaj maksymalną prędkość:");
+            double maxSpeed = Convert.ToDouble(Console.ReadLine());
+
+            ShipList.Add(new Ship(nazwa, maxKontenerCount, maxKontenerLoad, maxSpeed));
+            break;
+        case 2:
+            Console.WriteLine("Podaj typ kontenera:");
+            string typ = Console.ReadLine();
+
+            Console.WriteLine("Podaj masę własną kontenera:");
+            double masaWlasna = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Podaj wysokość kontenera:");
+            double wysokosc = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Podaj głębokość kontenera:");
+            double glebokosc = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Podaj maksymalną masę ładunku kontenera:");
+            double maxMasaLadunku = Convert.ToDouble(Console.ReadLine());
+
+            switch (typ)
+            {
+                case "L":
+                    KontenerList.Add(new LiquidKontener(masaWlasna, wysokosc, glebokosc, maxMasaLadunku));
+                    break;
+                case "G":
+                    KontenerList.Add(new GasKontener(masaWlasna, wysokosc, glebokosc, maxMasaLadunku));
+                    break;
+                case "C":
+                    KontenerList.Add(new RefrigeratedKontener(masaWlasna, wysokosc, glebokosc, maxMasaLadunku));
+                    break;
+                default:
+                    Console.WriteLine("Podany typ kontenera jest nieprawidłowy");
+                    break;
+            }
+            break;
+        case 3:
+            
+            break;
+        case 4:
+            
+            break;
+        case 5:
+            
+            break;
+        case 6:
+            
+            break;
+        case 7:
+            
+            break;
+        case 8:
+            
+            break;
+        case 9:
+            
+            break;
+        case 10:
+            
+            break;
+        case 11:
+            
+            break;
+        case 12:
+            
+            break;
+        case 13:
+            
+            break;
+        case 14:
+            CzyKoniec = true;
+            break;
+        default:
+            Console.WriteLine("Nie ma opcji o takim numerze");
+            break;
+    }
+    
+}
 
 void ShowShipList()
 {
