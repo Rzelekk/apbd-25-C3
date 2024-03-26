@@ -48,8 +48,8 @@ public class Kontener : IContainer
         }
         else
         {
-            MasaWlasna += cargoWeight;
-            Console.WriteLine("Zaladowano: "+cargoWeight+" kg, lączna masa ladunku: " + MasaLadunku +" kg");
+            MasaLadunku += cargoWeight;
+            Console.WriteLine($"Kontener {NumerSeryjny} -> Zaladowano: "+cargoWeight+" kg, lączna masa ladunku: " + MasaLadunku +" kg");
         }
     }
 
