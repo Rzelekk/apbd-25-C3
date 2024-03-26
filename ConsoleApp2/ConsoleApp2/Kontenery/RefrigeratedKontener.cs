@@ -73,7 +73,7 @@ public class RefrigeratedKontener : Kontener, IContainer
             else
             {
                 RodzajProduktu = product;
-                setupTemperature(product);
+                Temperatura = setupTemperature(product);
                 base.Load(cargoWeight);
             }
         }
