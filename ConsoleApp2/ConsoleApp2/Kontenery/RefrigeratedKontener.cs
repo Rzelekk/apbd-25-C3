@@ -7,7 +7,7 @@ public class RefrigeratedKontener : Kontener, IContainer
 {
     public Products RodzajProduktu { get; set; } = Products.BrakTowaru;
     public double Temperatura { get; set; }
-    public RefrigeratedKontener(string type, double masaWlasna, double wysokosc, double glebokosc, double maxMasaLadunku) : base(type, masaWlasna, wysokosc, glebokosc, maxMasaLadunku)
+    public RefrigeratedKontener(double masaWlasna, double wysokosc, double glebokosc, double maxMasaLadunku) : base("C", masaWlasna, wysokosc, glebokosc, maxMasaLadunku)
     {
     }
 
