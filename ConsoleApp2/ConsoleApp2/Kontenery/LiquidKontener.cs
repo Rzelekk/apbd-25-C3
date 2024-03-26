@@ -14,7 +14,7 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
     
     public override void Load(double cargoWeight)
     {
-        if (HazardCargo)
+        if (hazardCargo)
         {
             HazardCargo = true;
             if (MasaLadunku + cargoWeight > MaxMasaLadunku / 2)
