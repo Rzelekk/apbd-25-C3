@@ -21,8 +21,8 @@ public class Kontener : IContainer
 
     public Kontener(String type, double masaWlasna, double wysokosc, double glebokosc, double maxMasaLadunku)
     {
-        NumerSeryjny = GenerateSerialNumber();
         Typ = type;
+        NumerSeryjny = GenerateSerialNumber();
         MasaWlasna = masaWlasna;
         MaxMasaLadunku = maxMasaLadunku;
         Wysokosc = wysokosc;
