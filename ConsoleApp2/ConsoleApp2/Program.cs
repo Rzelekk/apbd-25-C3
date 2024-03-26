@@ -142,7 +142,18 @@ while (!CzyKoniec)
             }
             break;
         case 4:
+            Console.WriteLine("Podaj numer kontenera: ");
             
+            KontenerIndex = KontenerList.FindIndex(k => k.NumerSeryjny == Console.ReadLine());
+    
+            if(KontenerIndex == -1)
+            {
+                Console.WriteLine($"Nie można znaleźć kontenera o numerze seryjnym {KontenerIndex}.");
+            }
+            else
+            {
+                KontenerList[KontenerIndex].Unload();
+            }
             break;
         case 5:
             Console.WriteLine("Podaj nazwę statku: ");
