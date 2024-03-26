@@ -39,7 +39,8 @@ using ConsoleApp2.Ship;
 // ship.showShip();
 
 bool CzyKoniec = false;
-
+int KontenerIndex;
+int ShipIndex;
 List<Ship> ShipList = new List<Ship>();
 List<Kontener> KontenerList = new List<Kontener>();
 
