@@ -187,7 +187,18 @@ while (!CzyKoniec)
             
             break;
         case 8:
+            Console.WriteLine("Podaj nazwę statku: ");
             
+            ShipIndex = ShipList.FindIndex(k => k.Nazwa == Console.ReadLine());
+    
+            if(ShipIndex == -1)
+            {
+                Console.WriteLine($"Nie można znaleźć statku o nazwie: {ShipIndex}.");
+            }
+            else
+            {
+                ShipList[ShipIndex].UnloadAllFromShip();
+            }
             break;
         case 9:
             
