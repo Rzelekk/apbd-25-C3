@@ -124,7 +124,18 @@ while (!CzyKoniec)
             
             break;
         case 11:
+            Console.WriteLine("Podaj numer kontenera: ");
             
+            int index = KontenerList.FindIndex(k => k.NumerSeryjny == Console.ReadLine());
+    
+            if(index == -1)
+            {
+                Console.WriteLine($"Nie można znaleźć kontenera o numerze seryjnym {index}.");
+            }
+            else
+            {
+                KontenerList[index].ShowKontener();
+            }
             break;
         case 12:
             
