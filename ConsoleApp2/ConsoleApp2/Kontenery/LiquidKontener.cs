@@ -16,6 +16,7 @@ public class LiquidKontener : Kontener, IHazardNotifier, IContainer
     {
         if (HazardCargo)
         {
+            HazardCargo = true;
             if (MasaLadunku + cargoWeight > MaxMasaLadunku / 2)
             {
                 
