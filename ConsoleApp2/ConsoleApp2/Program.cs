@@ -152,7 +152,19 @@ while (!CzyKoniec)
             }
             break;
         case 13:
+            Console.WriteLine("Podaj nazwę statku: ");
             
+            int indexStatku2 = ShipList.FindIndex(k => k.Nazwa == Console.ReadLine());
+    
+            if(indexStatku2 == -1)
+            {
+                Console.WriteLine($"Nie można znaleźć statku o nazwie: {indexStatku2}.");
+            }
+            else
+            {
+                ShipList[indexStatku2].showShip();
+                ShipList[indexStatku2].ShowLadunek();
+            }
             break;
         case 14:
             CzyKoniec = true;
