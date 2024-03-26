@@ -1,6 +1,24 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 
+
+void ShowKontenerList()
+{
+    Console.WriteLine("Lista kontenerów:");
+    if (KontenerList.Count == 0)
+    {
+        Console.WriteLine("brak");
+    }
+    else
+    {
+        foreach (var kontener in KontenerList)
+        {
+            Console.WriteLine(kontener.ShowKontener());
+        }
+    }
+    Console.WriteLine("\n");
+}
+
 void ShowMenu()
 {
     Console.WriteLine("Możliwe akcje: ");
